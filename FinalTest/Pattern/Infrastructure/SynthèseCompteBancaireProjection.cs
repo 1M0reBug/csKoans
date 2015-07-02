@@ -1,5 +1,6 @@
 using System;
 using FinalTest.Pattern.Evenements;
+using FinalTest.Tests;
 
 namespace FinalTest.Pattern
 {
@@ -14,6 +15,7 @@ namespace FinalTest.Pattern
 
         public void Handle(RetraitRéalisé retraitRéalisé)
         {
+            SynthèseCompteBancaire synthese = new SynthèseCompteBancaire(retraitRéalisé.NuméroDeCompte, );
             _repository.Save(retraitRéalisé);
         }
     }

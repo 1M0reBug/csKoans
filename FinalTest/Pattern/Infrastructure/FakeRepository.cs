@@ -21,5 +21,10 @@ namespace FinalTest.Pattern
         {
             _synthèses.Add(retraitRéalisé);
         }
+
+        public Montant GetMontantFromNumeroCompte(string numeroCompte)
+        {
+
+        }
     }
 }

@@ -16,6 +16,21 @@ namespace FinalTest.Pattern.Evenements
             _dateRetrait = dateRetrait;
         }
 
+        public string NuméroDeCompte
+        {
+            get { return _numéroDeCompte; }
+        }
+
+        public Montant MontantRetrait
+        {
+            get { return _montantRetrait; }
+        }
+
+        public DateTime DateRetrait
+        {
+            get { return _dateRetrait; }
+        }
+
         protected bool Equals(RetraitRéalisé other)
         {
             return string.Equals(_numéroDeCompte, other._numéroDeCompte) && Equals(_montantRetrait, other._montantRetrait) && _dateRetrait.Equals(other._dateRetrait);
