@@ -32,15 +32,15 @@ namespace FinalTest.Tests
             Check.That(typeof(TypeReference).IsValueType).IsFalse();
         }
 
-        //[Test]
-        //public void DéfinirUneClasseRealisantUneMultiplication()
-        //{
-        //    var multiplication = new Multiplication();
+        [Test]
+        public void DéfinirUneClasseRealisantUneMultiplication()
+        {
+            var multiplication = new Multiplication();
 
-        //    Check.That(multiplication.PeutCalculer("2*3")).IsTrue();
-        //    Check.That(multiplication.PeutCalculer("2+3")).IsFalse();
-        //    Check.That(multiplication.Calculer("2*3")).IsEqualTo(6);
-        //}
+            Check.That(multiplication.PeutCalculer("2*3")).IsTrue();
+            Check.That(multiplication.PeutCalculer("2+3")).IsFalse();
+            Check.That(multiplication.Calculer("2*3")).IsEqualTo(6);
+        }
 
         //[Test]
         //public void DéfinirUneClasseRealisantUneSomme()
