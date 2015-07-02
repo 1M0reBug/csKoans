@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace FinalTest
+namespace FinalTest.LinQ
 {
     public class Nombres
     {

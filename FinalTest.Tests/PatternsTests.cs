@@ -1,4 +1,5 @@
 ﻿using System;
+using FinalTest.Pattern;
 using NFluent;
 using NUnit.Framework;
 
@@ -9,25 +10,25 @@ namespace FinalTest.Tests
     {
         private readonly string _numéroDeCompte = Guid.NewGuid().ToString();
 
-        //[Test]
-        //public void OuvrirUnCompteBancaireProduitUnEvénement()
-        //{
-        //    var autorisationDeCrédit = 0;
-        //    var evenements = CompteBancaire.Ouvrir(_numéroDeCompte, autorisationDeCrédit); // retourne un IEnumerable<IEvenementMetier> contenant l'événement CompteCréé
+        [Test]
+        public void OuvrirUnCompteBancaireProduitUnEvénement()
+        {
+            var autorisationDeCrédit = 0;
+            var evenements = CompteBancaire.Ouvrir(_numéroDeCompte, autorisationDeCrédit); // retourne un IEnumerable<IEvenementMetier> contenant l'événement CompteCréé
 
-        //    Check.That(evenements).ContainsExactly(new CompteCréé(_numéroDeCompte, autorisationDeCrédit));
-        //}
+            Check.That(evenements).ContainsExactly(new CompteCréé(_numéroDeCompte, autorisationDeCrédit));
+        }
 
-        //[Test]
-        //public void EtantDonnéUnCompteBancaireFaireUnDepotProduitUnEvenement()
-        //{
-        //    var compteBancaire = new CompteBancaire(new CompteCréé(_numéroDeCompte, 0)); // Event Sourcing avec un seul événement
-        //    var montantDepot = new Montant(10);
-        //    var dateDepot = DateTime.Now;
-        //    var evenements = compteBancaire.FaireUnDepot(montantDepot, dateDepot); // retourne un IEnumerable<IEvenementMetier> contenant l'événement DepotRealisé
+        [Test]
+        public void EtantDonnéUnCompteBancaireFaireUnDepotProduitUnEvenement()
+        {
+            var compteBancaire = new CompteBancaire(new CompteCréé(_numéroDeCompte, 0)); // Event Sourcing avec un seul événement
+            var montantDepot = new Montant(10);
+            var dateDepot = DateTime.Now;
+            var evenements = compteBancaire.FaireUnDepot(montantDepot, dateDepot); // retourne un IEnumerable<IEvenementMetier> contenant l'événement DepotRealisé
 
-        //    Check.That(evenements).ContainsExactly(new DépotRéalisé(_numéroDeCompte, montantDepot, dateDepot));
-        //}
+            Check.That(evenements).ContainsExactly(new DépotRéalisé(_numéroDeCompte, montantDepot, dateDepot));
+        }
 
         //[Test]
         //public void EtantDonnéUnCompteBancaireFaireUnRetraitAvecProvisionSuffisanteProduitUnEvenement()

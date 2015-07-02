@@ -42,7 +42,12 @@
     <Compile Include="BaseCSharp\Calculatrice.cs" />
     <Compile Include="BaseCSharp\IOperation.cs" />
     <Compile Include="BaseCSharp\Multiplication.cs" />
-    <Compile Include="Nombres.cs" />
+    <Compile Include="Pattern\CompteBancaire.cs" />
+    <Compile Include="Pattern\CompteCréé.cs" />
+    <Compile Include="Pattern\DépotRéalisé.cs" />
+    <Compile Include="Pattern\IEvenementMetier.cs" />
+    <Compile Include="LinQ\Nombres.cs" />
+    <Compile Include="Pattern\Montant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseCSharp\Somme.cs" />
     <Compile Include="BaseCSharp\TypeReference.cs" />
