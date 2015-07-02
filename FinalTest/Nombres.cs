@@ -25,7 +25,7 @@ namespace FinalTest
             {
                 return
                     _keyValuePairs.Select(s => s)
-                        .Where(s => s.Value%2 != 0)
+                        .Where(s => s.Value % 2 != 0)
                         .OrderBy(a => a.Value)
                         .Select(s => s.Key)
                         .Aggregate((a, b) => a + ", " + b);
@@ -35,6 +35,11 @@ namespace FinalTest
         public string PremierNombreDontLeTexteContientPlusDe5Caractères
         {
             get { return _keyValuePairs.First(s => s.Key.Length > 5).Key; }
+        }
+
+        public IEnumerable<int> QuatreNombresSupérieursSuivant3
+        {
+            get { return _keyValuePairs.Select(s => s.Value).OrderBy(s => s).Where(s => s > 3).Take(4); }
         }
     }
 }
