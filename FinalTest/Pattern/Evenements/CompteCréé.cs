@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace FinalTest.Pattern
+﻿namespace FinalTest.Pattern.Evenements
 {
-    public class CompteCréé : IEvenementMetier
+    public class CompteCréé : IEvénementMétier
     {
         private readonly string _numéroDeCompte;
         private readonly int _autorisationDeCrédit;
@@ -16,6 +14,11 @@ namespace FinalTest.Pattern
         public string NuméroDeCompte
         {
             get { return _numéroDeCompte; }
+        }
+
+        public int AutorisationDeCrédit
+        {
+            get { return _autorisationDeCrédit; }
         }
 
         protected bool Equals(CompteCréé other)

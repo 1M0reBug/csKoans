@@ -10,6 +10,16 @@ namespace FinalTest.Tests
             this._montant = montant;
         }
 
+        public int Montant1
+        {
+            get { return _montant; }
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Montant: {0}, Montant1: {1}", _montant, Montant1);
+        }
+
         protected bool Equals(Montant other)
         {
             return _montant == other._montant;
@@ -26,6 +36,16 @@ namespace FinalTest.Tests
         public override int GetHashCode()
         {
             return _montant;
+        }
+
+        public void Add(Montant montant)
+        {
+            _montant += montant.Montant1;
+        }
+
+        public void Sub(Montant montantRetrait)
+        {
+            _montant -= montantRetrait.Montant1;
         }
     }
 }

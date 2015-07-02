@@ -1,9 +1,9 @@
 using System;
 using FinalTest.Tests;
 
-namespace FinalTest.Pattern
+namespace FinalTest.Pattern.Evenements
 {
-    public class DépotRéalisé : IEvenementMetier
+    public class DépotRéalisé : IEvénementMétier
     {
         private readonly string _numeroDeCompte;
         private readonly Montant _montantDepot;
@@ -14,6 +14,11 @@ namespace FinalTest.Pattern
             _numeroDeCompte = numeroDeCompte;
             _montantDepot = montantDepot;
             _dateDepot = dateDepot;
+        }
+
+        public Montant MontantDepot
+        {
+            get { return _montantDepot; }
         }
 
         protected bool Equals(DépotRéalisé other)
