@@ -1,5 +1,4 @@
-﻿using System;
-using NFluent;
+﻿using NFluent;
 using NUnit.Framework;
 
 namespace FinalTest.Tests
@@ -8,7 +7,7 @@ namespace FinalTest.Tests
     public class BasesCSharpTests
     {
         [Test]
-        public void CeTestDoitPasserSiEnvironnementOK()
+        public void CeTestDoitPasserSiEnvironnementOk()
         {
             Check.That(true).IsTrue();
         }
@@ -23,15 +22,15 @@ namespace FinalTest.Tests
             Check.That(typeof(TypeValeur).IsValueType).IsTrue();
         }
 
-        //[Test]
-        //public void DéfinirUnTypeRéférenceAvecEgalitéDeuxInstancesAyantLesMêmesPropriétés()
-        //{
-        //    var valeur1 = new TypeReference(12);
-        //    var valeur2 = new TypeReference(12);
+        [Test]
+        public void DéfinirUnTypeRéférenceAvecEgalitéDeuxInstancesAyantLesMêmesPropriétés()
+        {
+            var valeur1 = new TypeReference(12);
+            var valeur2 = new TypeReference(12);
 
-        //    Check.That(valeur1).IsEqualTo(valeur2);
-        //    Check.That(typeof(TypeReference).IsValueType).IsFalse();
-        //}
+            Check.That(valeur1).IsEqualTo(valeur2);
+            Check.That(typeof(TypeReference).IsValueType).IsFalse();
+        }
 
         //[Test]
         //public void DéfinirUneClasseRealisantUneMultiplication()
