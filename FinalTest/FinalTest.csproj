@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Multiplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Somme.cs" />
     <Compile Include="TypeReference.cs" />
     <Compile Include="TypeValeur.cs" />
   </ItemGroup>
