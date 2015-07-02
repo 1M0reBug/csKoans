@@ -7,7 +7,6 @@ namespace FinalTest
     public class Nombres
     {
         private readonly IEnumerable<KeyValuePair<string, int>> _keyValuePairs;
-        private readonly int _bidule;
 
         public Nombres(IEnumerable<KeyValuePair<string, int>> keyValuePairs)
         {
@@ -16,12 +15,26 @@ namespace FinalTest
 
         public IEnumerable<int> NombresPairs
         {
-            get { return _keyValuePairs.Select(s => s.Value).Where(s => s % 2 == 0); } 
+            get { return _keyValuePairs.Select(s => s.Value).Where(v => v%2 == 0); }
         }
 
-        public int Bidule
+
+        public string TexteNombresImpairs
         {
-            get { return _bidule; }
+            get
+            {
+                return
+                    _keyValuePairs.Select(s => s)
+                        .Where(s => s.Value%2 != 0)
+                        .OrderBy(a => a.Value)
+                        .Select(s => s.Key)
+                        .Aggregate((a, b) => a + ", " + b);
+            }
+        }
+
+        public string PremierNombreDontLeTexteContientPlusDe5Caractères
+        {
+            get { return _keyValuePairs.First(s => s.Key.Length > 5).Key; }
         }
     }
 }
