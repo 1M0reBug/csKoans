@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace FinalTest
+﻿namespace FinalTest.BaseCSharp
 {
     public struct TypeValeur
     {

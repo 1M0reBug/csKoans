@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FinalTest
+﻿namespace FinalTest.BaseCSharp
 {
     public class TypeReference
     {

@@ -1,4 +1,5 @@
-﻿using NFluent;
+﻿using FinalTest.BaseCSharp;
+using NFluent;
 using NUnit.Framework;
 
 namespace FinalTest.Tests

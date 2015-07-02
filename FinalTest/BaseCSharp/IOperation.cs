@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FinalTest
+namespace FinalTest.BaseCSharp
 {
     public interface IOperation
     {
