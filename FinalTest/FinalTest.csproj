@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculatrice.cs" />
+    <Compile Include="IOperation.cs" />
     <Compile Include="Multiplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Somme.cs" />

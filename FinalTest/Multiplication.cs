@@ -5,7 +5,7 @@ using System.Windows.Markup;
 
 namespace FinalTest
 {
-    public class Multiplication
+    public class Multiplication : IOperation
     {
         public Multiplication()
         {

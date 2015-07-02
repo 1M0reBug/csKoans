@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace FinalTest
 {
-    public class Somme
+    public class Somme : IOperation
     {
         public Boolean PeutCalculer(string p0)
         {
