@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using FinalTest.Pattern.Evenements;
 using FinalTest.Tests;
@@ -19,12 +20,11 @@ namespace FinalTest.Pattern
 
         public void Save(RetraitRéalisé retraitRéalisé)
         {
-            _synthèses.Add(retraitRéalisé);
         }
 
         public Montant GetMontantFromNumeroCompte(string numeroCompte)
         {
-
+            throw new NotImplementedException();
         }
     }
 }

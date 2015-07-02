@@ -53,7 +53,7 @@ namespace FinalTest.Pattern
         {
             RetraitRéalisé retrait = new RetraitRéalisé(_numeroDeCompte, montantRetrait, dateRetrait);
             _evenements.Add(retrait);
-            if (montantRetrait.Montant1 > _autorisationDeCrédit)
+            if (montantRetrait.Montant1 - _montant.Montant1 > _autorisationDeCrédit)
             {
                 throw new RetraitNonAutorisé("La valeur du retrait est supérieurs à la valeure maximale autorisée !");
             }
